@@ -1,0 +1,10 @@
+/* TABLET */
+/* Max-width: 1024px */
+
+.header-links, .socials {
+    display: none;
+}
+
+.hamburger {
+    display: flex;
+}
