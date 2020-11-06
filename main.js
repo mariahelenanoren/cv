@@ -4,12 +4,18 @@ window.addEventListener("load", main);
 
 /** Functions to be initiated on window load */
 function main() {
+    animateEmojis();
     addEventListeners();
 }
 
 function addEventListeners() {
     const dropdown = document.querySelector(".dropdown");
     const hamburger = document.querySelector(".hamburger");
+    const filterButtons = document.querySelectorAll(".filter-buttons button")
+
+    for (let i = 0; i < filterButtons.length; i++) {
+        filterButtons[i].addEventListener("click", filterProjects, filterButtons)
+    }
 
     window.addEventListener('resize', adjustHamburger);
     dropdown.addEventListener("mouseover", showDropdown);
@@ -69,15 +75,20 @@ function unCrossTheHamburger(hamburger) {
 }
 
 function showHamburgerMenu(hamburgerMenu) {
+    const html = document.querySelector("html");
+
+    html.style.overflowY = "hidden";
     hamburgerMenu.style.display = "flex";
 }
 
 function hideHamburgerMenu(hamburgerMenu) {
+    const html = document.querySelector("html");
+
+    html.style.overflowY = "scroll";
     hamburgerMenu.style.display = "none";
 }
 
 function showDropdown() {
-    console.log("hello");
     const dropdown = document.querySelector(".dropdown");
     const dropdownContent = document.querySelector(".dropdown-content");
 
@@ -90,3 +101,59 @@ function hideDropdown() {
     dropdownContent.style.display = "none";
 }
 
+function animateEmojis() {
+    animateHand();
+}
+
+function animateHand() {
+    const hand = document.querySelector("#hand")
+    hand.style.transform = "rotate(20deg)";
+    
+    let i = 0;
+
+    rotate = setInterval(function() {
+        if (i === 3) {
+            clearInterval(rotate)
+        }
+        else {
+            if (hand.style.transform === "rotate(-10deg)") {
+                hand.style.transform = "rotate(20deg)"
+            }
+            else {
+                hand.style.transform = "rotate(-10deg)"
+            }
+            i++;
+        }
+    }, 200);
+}
+
+function filterProjects(filterButtons) {
+    const graphicDesignProjects = document.querySelectorAll(".graphic-design")
+    const webProjects = document.querySelectorAll(".web-project")
+
+    if (filterButtons.target.innerHTML.toLowerCase() === "graphic design") {
+        graphicDesignProjects.forEach( function(items) {
+            items.style.display = "unset";
+        });
+        webProjects.forEach( function(items) {
+            items.style.display = "none";
+        });
+    }
+    else if (filterButtons.target.innerHTML.toLowerCase() === "web projects") {
+        graphicDesignProjects.forEach( function(items) {
+            items.style.display = "none";
+        });
+        webProjects.forEach( function(items) {
+            items.style.display = "unset";
+        });
+    }
+    else {
+        graphicDesignProjects.forEach( function(items) {
+            items.style.display = "unset";
+        });
+        webProjects.forEach( function(items) {
+            items.style.display = "unset";
+        });
+
+    }
+}

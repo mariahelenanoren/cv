@@ -1,0 +1,15 @@
+/* TABLET SMALL */
+/* Max-width: 768px */
+
+.project-container {
+    margin: 2.5% 0;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.project-button {
+    font-size: 1.2rem;
+}
