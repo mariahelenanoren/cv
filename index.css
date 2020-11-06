@@ -196,16 +196,26 @@ main {
 
 /*  PROJECTS */
 
-.project-container {
-    flex-grow: 0;
-    margin: 2.5% 0;
-    width: 47.5%;
-    background-color: white;
+.filter-buttons {
+    width: 80%;
+    margin-left: 20%;
+}
 
+.projects {
+    columns: 2;
+    column-gap: 2.5%;
+}
+
+.project-container {
+    display: inline-block;
+    margin: 5% 0;
+    width: 95%;
+    background-color: white;
 }
 
 .project-info {
     padding: 1.5rem;
+    background-color: white;
 }
 
 h2 {
@@ -228,7 +238,7 @@ h2 {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.2rem;
-    margin: 0 0.5rem 0.5rem 0;
+    margin-right: 0.5rem;
     white-space: nowrap;
 }
 
@@ -303,4 +313,8 @@ footer {
 
 .align-start {
     align-items: flex-start;
+}
+
+.grid {
+    display: grid;
 }

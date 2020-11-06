@@ -133,7 +133,7 @@ function filterProjects(filterButtons) {
 
     if (filterButtons.target.innerHTML.toLowerCase() === "graphic design") {
         graphicDesignProjects.forEach( function(items) {
-            items.style.display = "unset";
+            items.style.display = "inline-block";
         });
         webProjects.forEach( function(items) {
             items.style.display = "none";
@@ -144,15 +144,15 @@ function filterProjects(filterButtons) {
             items.style.display = "none";
         });
         webProjects.forEach( function(items) {
-            items.style.display = "unset";
+            items.style.display = "inline-block";
         });
     }
     else {
         graphicDesignProjects.forEach( function(items) {
-            items.style.display = "unset";
+            items.style.display = "inline-block";
         });
         webProjects.forEach( function(items) {
-            items.style.display = "unset";
+            items.style.display = "inline-block";
         });
 
     }
