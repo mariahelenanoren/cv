@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
+    list-style: none;
 }
+
+/* SKAPA VARIABLAR FÖR HAMBURGAR MENY */
 
 html, body {
     margin: 0;
@@ -14,46 +17,96 @@ html, body {
     height: 100%;
     width: 100%;
     max-width: 150rem;
-    padding: 0 8% 0 8%;
+    padding: 0 12% 0 12%;
 }
 
 /* HEADER */
 header {
     width: 100%;
     background-color: white;
+    height: 4rem;
+    font-size: 1.2rem;
+    z-index: 100;
 }
 
 h1 {
-    margin: 0 !important;
-    padding: 1.5rem 0rem 1.5rem 0rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 /* Header links */
-.header-links {
-    margin-left: 3rem;
+
+.header-nav {
+    margin-left: 5rem;
+    font-size: 1.1rem;
+    font-weight: 300;
 }
 
-.header-links a {
-    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
-    font-size: 1.2rem;
+.header-nav > * {
+    width: fit-content;
+}
+
+.header-nav a {
+    padding: 0 2rem;
+}
+
+/* Dropdown menu */
+.dropdown > a:after {
+    height: 0;
+    width: 0;
+    margin: 0.5rem 0 0 0.8rem;
+    border: 0.4rem solid transparent;
+    border-top-color:  #FC584D;
+    content: "";
+}
+
+.dropdown {
+    height: 4rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 4rem;
+    top: 0;
+    color:white;
+    width: inherit;
+    padding: 0.8rem;
+    border-radius: 0 0 1rem 1rem;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    margin: 0.3rem;
+    padding: 0!important;
+}
+
+.triangle {
+    position: absolute;
+    top: -1rem;
+    transform: rotate(180deg);
+    border: 0.5rem solid transparent;
+    border-top-color: #FC584D;
+    content: "";
+    height: 0;
+    width: 0;
+    z-index: 100;
 }
 
 /* Socials */
 .social {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.1rem;
+    height: 2.1rem;
     margin-left: 0.5rem;
     border-radius: 100%;
-    background-color: red;
+    background-color: #FC584D;
 }
 
 /* Hamburger */
 .hamburger {
     width: 2.2rem;
-    height: calc(1.4rem);
+    height: calc(1.4rem + 4px);
     display: none;
     position: relative;
 }
@@ -81,11 +134,49 @@ header p {
     display: none;
 }
 
+/* Hamburger menu */
+
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    padding: 2rem 12%;
+    top: 4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: 300;
+    background-color: white;
+}
+
+.hamburger-nav > ul {
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.hamburger-menu li {
+    margin: 1rem;
+}
+
 /* MAIN */
 main {
     width: 100%;
-    flex-grow: 1;
-    background-color: pink; 
+    flex-grow: 1; 
+}
+
+/* INTRODUCTION */
+.introduction {
+    width: 100%;
+    padding: 9rem 0;
+}
+
+.introduction img {
+    width: 14rem;
+    margin-right: 3rem;
+    border-radius: 100%;
+}
+
+.profile-text {
+    font-size: 1.8rem;
 }
 
 /* FOOTER */
@@ -122,8 +213,12 @@ footer {
     justify-content: center;
 }
 
-.space-between {
+.justify-space-between {
     justify-content: space-between;
+}
+
+.grow {
+    flex: 1;
 }
 
 .primary {

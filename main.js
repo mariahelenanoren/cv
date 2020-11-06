@@ -8,29 +8,46 @@ function main() {
 }
 
 function addEventListeners() {
+    const dropdown = document.querySelector(".dropdown");
     const hamburger = document.querySelector(".hamburger");
 
+    window.addEventListener('resize', adjustHamburger);
+    dropdown.addEventListener("mouseover", showDropdown);
+    dropdown.addEventListener("mouseout", hideDropdown);
     hamburger.addEventListener("click", animateHamburger);
+    
+}
+
+/** Closes hamburger menu if window is resized to desktop */
+function adjustHamburger() {
+    const hamburger = document.querySelectorAll(".hamburger span")
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+    if (window.innerWidth > 1024) {
+        hamburgerMenu.style.display = "none";
+        hideHamburgerMenu(hamburgerMenu);
+        unCrossTheHamburger(hamburger);
+    }
 }
 
 function animateHamburger() {
     const hamburger = document.querySelectorAll(".hamburger span");
-    const p = document.querySelector("header p") // CHANGE TO MENU
-    console.log(p.style.display);
+    const hamburgerMenu = document.querySelector(".hamburger-menu") // CHANGE TO MENU
 
-    if (p.style.display !== "unset") {
-        crossTheHamburger(hamburger, p);
+    if (hamburgerMenu.style.display !== "flex") {
+        crossTheHamburger(hamburger);
+        showHamburgerMenu(hamburgerMenu);
     }
-    else if (p.style.display == "unset") {
-        unCrossTheHamburger(hamburger, p);
+    else if (hamburgerMenu.style.display == "flex") {
+        unCrossTheHamburger(hamburger);
+        hideHamburgerMenu(hamburgerMenu);
     }
 }
 
-function crossTheHamburger(hamburger, p) {
+function crossTheHamburger(hamburger) {
     
     hamburger[0].style.top = "0.7rem"
     hamburger[2].style.top = "0.7rem"
-    p.style.display = "unset"
 
     setTimeout( function() {
         hamburger[1].style.display = "none";
@@ -39,7 +56,7 @@ function crossTheHamburger(hamburger, p) {
     }, 200);
 }
 
-function unCrossTheHamburger(hamburger, p) {
+function unCrossTheHamburger(hamburger) {
     
     setTimeout( function() {
         hamburger[0].style.top = "0rem"
@@ -49,5 +66,27 @@ function unCrossTheHamburger(hamburger, p) {
 
     hamburger[0].style.transform = "rotate(0deg)";
     hamburger[2].style.transform = "rotate(0deg)";
-    p.style.display = "none";
 }
+
+function showHamburgerMenu(hamburgerMenu) {
+    hamburgerMenu.style.display = "flex";
+}
+
+function hideHamburgerMenu(hamburgerMenu) {
+    hamburgerMenu.style.display = "none";
+}
+
+function showDropdown() {
+    console.log("hello");
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    dropdownContent.style.display = "flex";
+}
+
+function hideDropdown() {
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    dropdownContent.style.display = "none";
+}
+

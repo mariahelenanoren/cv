@@ -14,23 +14,28 @@
     <div class="wrapper flex column">
 
         <!-- HEADER -->
-        <header class="flex row align-center space-between">
-            <div class="flex row align-center">
+        <header class="flex row align-center justify-space-between">
+            <div class="left-side-menu flex row align-center">
                 <h1>Maria Helena Norén</h1>
-                <div class="header-links flex row">
+                <nav class="header-nav flex row center">
                     <a>Projects</a>
-                    <a>About</a>
-                </div>
+                    <div class="dropdown flex column center">
+                        <a class="flex align-center">About</a>
+                        <div class="dropdown-content primary column align-center">
+                            <div class="triangle"></div>
+                            <a>Education</a>
+                            <a>Work experience</a>
+                            <a>Other</a>
+                        </div>
+                    </div>
+                </nav>
             </div>
-            
             <!-- Socials -->
-            <div class="socials flex row">
+            <div class="right-side-menu flex row">
                 <div class="social"></div>
                 <div class="social"></div>
                 <div class="social"></div>
             </div>
-
-            <p>Hello</p>
 
             <!-- Hamburger -->
             <div class="hamburger column">
@@ -41,8 +46,40 @@
 
         </header>
 
+        <!-- Hamburger menu -->
+        <div class="hamburger-menu column">
+                <nav class="hamburger-nav grow">
+                    <ul>
+                        <li>Projects</li>
+                        <li>About</li>
+                            <ul>
+                                <li>Education</li>
+                                <li>Work experience</li>
+                                <li>Other</li>
+                            </ul>
+                    </ul>
+                </nav>
+
+                <div class="flex row">
+                    <div class="social"></div>
+                    <div class="social"></div>
+                    <div class="social"></div>
+                </div>
+        </div>
+
         <!-- MAIN -->
-        <main></main>
+        <main>
+            <div class="introduction flex row center">
+                <img src="./assets/profile-picture.jpg" alt="Image of myself">
+                <div class="profile-text">
+                    <p>Hello! 👋 My name is Maria Helena 👩,<br>
+                        a front end developer 💻 with a<br>
+                        background in graphic design ✍️<br>
+                        based in Gothenburg 📍
+                    </p>
+                </div>
+            </div>
+        </main>
 
         <!-- FOOTER -->
         <footer></footer>

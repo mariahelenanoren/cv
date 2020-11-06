@@ -1,7 +1,7 @@
 /* TABLET */
 /* Max-width: 1024px */
 
-.header-links, .socials {
+.left-side-menu > nav, .right-side-menu {
     display: none;
 }
 
