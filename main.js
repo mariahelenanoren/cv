@@ -130,6 +130,20 @@ function animateHand() {
 function filterProjects(filterButtons) {
     const graphicDesignProjects = document.querySelectorAll(".graphic-design")
     const webProjects = document.querySelectorAll(".web-project")
+    const allFilterButtons = document.querySelectorAll(".filter-buttons button")
+
+    allFilterButtons.forEach( function(button) {
+        button.classList.remove("active")
+        if (button !== filterButtons.target) {
+            button.style.backgroundColor = "transparent";
+            button.style.color = "#FC584D";
+        }
+        else if (button == filterButtons.target) {
+            button.style.backgroundColor = "#FC584D";
+            button.style.color = "white"
+        }
+    })
+
 
     if (filterButtons.target.innerHTML.toLowerCase() === "graphic design") {
         graphicDesignProjects.forEach( function(items) {

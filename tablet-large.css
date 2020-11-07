@@ -17,16 +17,17 @@
 }
 
 /* INTRODUCTION */
+
 .introduction {
     width: 100%;
 }
 
 .introduction img {
-    width: 10rem;
+    width: 12rem;
     margin-right: 2rem;
     border-radius: 100%;
 }
 
 .profile-text {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }

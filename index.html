@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="tablet-large.css" media="(max-width: 1024px)">
     <link rel="stylesheet" href="tablet-small.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 480px)">
     <script src="./main.js"></script>
 
 </head>
@@ -73,18 +74,17 @@
             <div class="introduction flex row center">
                 <img src="./assets/profile-picture.jpg" alt="Image of myself">
                 <div class="profile-text">
-                        <p>Hello!</p>
-                        <p class="emoji flex" id="hand">&#128075;</p>
-                        <p>My name is <b>Maria Helena</b>&#128590;,</p><br>
+                        <div class="first-p flex row"><p>Hello!</p><p class="emoji flex" id="hand">&#128075;</p></div>
+                        <div class="second-p"><p>My name is <b>Maria Helena</b>&#128590;,</p>
                         <p>a <b>front end developer</b> 💻 with a<br>
                         background in <b>graphic design</b> ✍️<br>
-                        based in <b>Gothenburg</b> 📍
+                        based in <b>Gothenburg</b>📍</p></div>
                         </p>
                 </div>
             </div>
 
             <div class="filter-buttons wrap flex row justify-end">
-                <button class="project-button">ALL</button>
+                <button class="project-button active">ALL</button>
                 <button class="project-button">GRAPHIC DESIGN</button>
                 <button class="project-button">WEB PROJECTS</button>
             </div>

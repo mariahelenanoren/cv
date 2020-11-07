@@ -10,7 +10,7 @@ html, body {
     margin: 0;
     width: 100%;
     background-color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -155,7 +155,7 @@ header p {
 }
 
 .hamburger-menu li {
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 /* MAIN */
@@ -168,6 +168,7 @@ main {
 .introduction {
     width: 100%;
     height: 60vh;
+    flex-direction: row;
 }
 
 .introduction img {
@@ -178,20 +179,17 @@ main {
 
 .profile-text {
     font-size: 1.8rem;
+    text-align: left;
 }
 
 .profile-text p {
     margin: 0;
-}
-
-.profile-text > p {
     float: left;
 }
 
 .emoji {
     padding: 0 0.3rem;
     transition: transform 0.25s ease-in-out;
-
 }
 
 /*  PROJECTS */
@@ -201,32 +199,47 @@ main {
     margin-left: 20%;
 }
 
+.filter-buttons button {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.active {
+    background-color: #FC584D!important;
+    color: white!important;
+}
+
 .projects {
     columns: 2;
-    column-gap: 2.5%;
+    column-gap: 5%;
 }
 
 .project-container {
     display: inline-block;
     margin: 5% 0;
-    width: 95%;
+    width: 100%;
     background-color: white;
 }
 
 .project-info {
+    border-radius: 0 0 0.5rem 0.5rem;
     padding: 1.5rem;
     background-color: white;
 }
 
 h2 {
     margin-top: 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .project-image {
     width: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.project-buttons button {
+    margin-right: 0.5rem;
 }
 
 .project-button {
@@ -238,7 +251,6 @@ h2 {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.2rem;
-    margin-right: 0.5rem;
     white-space: nowrap;
 }
 

@@ -1,0 +1,11 @@
+/* MOBILE */
+/* Max-width: 480px */
+
+.profile-text p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.introduction img {
+    width: 10rem;
+}
