@@ -4,16 +4,13 @@ window.addEventListener("load", main);
 
 /** Functions to be initiated on window load */
 function main() {
-    animateEmojis();
     addEventListeners();
 }
 
 function addEventListeners() {
-    const dropdown = document.querySelector(".dropdown");
     const hamburger = document.querySelector(".hamburger");
     const filterButtons = document.querySelectorAll(".filter-buttons button")
     const expandButtons = document.querySelectorAll(".information-container")
-    console.log(expandButtons)
 
     for (let i = 0; i < expandButtons.length; i++) {
         expandButtons[i].addEventListener("click", showExtendedInformation, expandButtons)
@@ -23,23 +20,8 @@ function addEventListeners() {
         filterButtons[i].addEventListener("click", filterProjects, filterButtons)
     }
 
-    window.addEventListener('resize', adjustHamburger);
-    dropdown.addEventListener("mouseover", showDropdown);
-    dropdown.addEventListener("mouseout", hideDropdown);
     hamburger.addEventListener("click", animateHamburger);
     
-}
-
-/** Closes hamburger menu if window is resized to desktop */
-function adjustHamburger() {
-    const hamburger = document.querySelectorAll(".hamburger span")
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
-
-    if (window.innerWidth > 1024) {
-        hamburgerMenu.style.display = "none";
-        hideHamburgerMenu(hamburgerMenu);
-        unCrossTheHamburger(hamburger);
-    }
 }
 
 function animateHamburger() {
@@ -92,45 +74,6 @@ function hideHamburgerMenu(hamburgerMenu) {
 
     html.style.overflowY = "scroll";
     hamburgerMenu.style.display = "none";
-}
-
-function showDropdown() {
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownContent = document.querySelector(".dropdown-content");
-
-    dropdownContent.style.display = "flex";
-}
-
-function hideDropdown() {
-    const dropdownContent = document.querySelector(".dropdown-content");
-
-    dropdownContent.style.display = "none";
-}
-
-function animateEmojis() {
-    animateHand();
-}
-
-function animateHand() {
-    const hand = document.querySelector("#hand")
-    hand.style.transform = "rotate(20deg)";
-    
-    let i = 0;
-
-    rotate = setInterval(function() {
-        if (i === 3) {
-            clearInterval(rotate)
-        }
-        else {
-            if (hand.style.transform === "rotate(-10deg)") {
-                hand.style.transform = "rotate(20deg)"
-            }
-            else {
-                hand.style.transform = "rotate(-10deg)"
-            }
-            i++;
-        }
-    }, 200);
 }
 
 function filterProjects(filterButtons) {

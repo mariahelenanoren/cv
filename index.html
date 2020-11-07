@@ -17,70 +17,45 @@
 
         <!-- HEADER -->
         <header class="flex row align-center justify-space-between">
-            <div class="left-side-menu flex row align-center">
-                <h1>Maria Helena Norén</h1>
-                <nav class="header-nav row center">
-                    <a>Projects</a>
-                    <div class="dropdown flex column center">
-                        <a class="flex align-center">About</a>
-                        <div class="dropdown-content primary column align-center">
-                            <div class="triangle"></div>
-                            <a>Education</a>
-                            <a>Work experience</a>
-                            <a>Other</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <!-- Socials -->
-            <div class="right-side-menu row">
-                <div class="social"></div>
-                <div class="social"></div>
-                <div class="social"></div>
-            </div>
-
-            <!-- Hamburger -->
+            <h1 class="weight-semibold">Maria Helena Norén</h1>
             <div class="hamburger column">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
         </header>
 
         <!-- Hamburger menu -->
-        <div class="hamburger-menu column">
-                <nav class="hamburger-nav grow">
-                    <ul>
-                        <li>Projects</li>
-                        <li>About</li>
-                            <ul>
-                                <li>Education</li>
-                                <li>Work experience</li>
-                                <li>Other</li>
-                            </ul>
-                    </ul>
-                </nav>
+        <div class="hamburger-menu column align-center">
+            <div class="hamburger-inner">
+                    <nav class="hamburger-nav grow weight-normal">
+                        <ul>
+                            <li>Projects</li>
+                            <li>About</li>
+                                <ul>
+                                    <li>Education</li>
+                                    <li>Work experience</li>
+                                    <li>Other</li>
+                                </ul>
+                        </ul>
+                    </nav>
 
-                <div class="flex row">
-                    <div class="social"></div>
-                    <div class="social"></div>
-                    <div class="social"></div>
-                </div>
+                    <div class="flex row">
+                        <div class="social"></div>
+                        <div class="social"></div>
+                        <div class="social"></div>
+                    </div>
+            </div>
         </div>
 
         <!-- MAIN -->
         <main>
-            <div class="introduction flex row center">
-                <img src="./assets/profile-picture.jpg" alt="Image of myself">
-                <div class="profile-text">
-                        <div class="first-p flex row"><p>Hello!</p><p class="emoji flex" id="hand">&#128075;</p></div>
-                        <div class="second-p"><p>My name is <b>Maria Helena</b>&#128590;,</p>
-                        <p>a <b>front end developer</b> 💻 with a<br>
-                        background in <b>graphic design</b> ✍️<br>
-                        based in <b>Gothenburg</b>📍</p></div>
-                        </p>
-                </div>
+            <div class="introduction flex row center text-center">
+                <p class="weight-normal">
+                    <span class="weight-semibold">Hello!</span> My name is <span class="weight-semibold">Maria Helena,</span><br>
+                    a <span class="weight-semibold">front end developer</span> with a background in<br>
+                    <span class="weight-semibold">graphic design</span> based in <span class="weight-semibold">Gothenburg</span>
+                </p>
             </div>
 
             <div class="filter-buttons wrap flex row justify-end">
@@ -88,6 +63,7 @@
                 <button class="project-button">GRAPHIC DESIGN</button>
                 <button class="project-button">WEB PROJECTS</button>
             </div>
+
             <div class="projects">
 
                 <div class="project-container web-project rounded shadow">
@@ -134,7 +110,7 @@
 
             <div class="about flex column">
                 <div class="about-section flex justify-space-between">
-                    <h3>About me</h3>
+                    <img src="/assets/profile-picture.jpg">
                     <p class="offset">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam odio sunt quidem distinctio! Unde maxime eveniet nihil vitae harum, rem totam assumenda? Doloremque, id? Maxime, commodi delectus. Adipisci, perferendis.
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat facere provident assumenda. Sit amet officia, eum veritatis ab eveniet voluptatum hic quas totam harum, sequi vitae? Nihil autem eaque modi.
                     </p>
@@ -145,16 +121,10 @@
 
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
-                                <div class="information-headline flex column">
-                                    <div class="flex row justify-space-between">
-                                        <h4>Designkandidat</h4>
-                                        <h6>2017 – 2020</h6>
-                                    </div>
-                                    <h5>Högskolan för design och konsthantverk</h5>
-                                </div>
-                                <div class="expand-button flex align-center justify-end">
-                                </div>
+                                <h4>Designkandidat</h4>
+                                <h6>2017 – 2020</h6>
                             </div>
+                            <h5>Högskolan för design och konsthantverk</h5>
                             <div class="expanded-information">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
                             </div>
