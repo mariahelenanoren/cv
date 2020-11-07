@@ -14,7 +14,6 @@ function addEventListeners() {
 
     for (let i = 0; i < expandButtons.length; i++) {
         expandButtons[i].addEventListener("click", showExtendedInformation, expandButtons)
-        console.log(expandButtons[i])
     }
     for (let i = 0; i < filterButtons.length; i++) {
         filterButtons[i].addEventListener("click", filterProjects, filterButtons)
@@ -123,5 +122,5 @@ function filterProjects(filterButtons) {
 
 function showExtendedInformation(expandButtons) {
     const target = expandButtons.currentTarget;
-    target.children[1].classList.toggle("auto-height");
+    target.children[2].classList.toggle("auto-height");
 }

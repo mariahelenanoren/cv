@@ -27,8 +27,8 @@
 
         <!-- Hamburger menu -->
         <div class="hamburger-menu column align-center">
-            <div class="hamburger-inner">
-                    <nav class="hamburger-nav grow weight-normal">
+            <div class="hamburger-inner flex column">
+                    <nav class="hamburger-nav flex grow weight-normal">
                         <ul>
                             <li>Projects</li>
                             <li>About</li>
@@ -40,7 +40,7 @@
                         </ul>
                     </nav>
 
-                    <div class="flex row">
+                    <div class="flex row align-bottom">
                         <div class="social"></div>
                         <div class="social"></div>
                         <div class="social"></div>
@@ -72,76 +72,64 @@
                         <h2>Project 1</h2>
                         <div class="project-buttons flex row">
                             <button class="project-button flex center">Code</button>
-                            <button class="project-button flex center">Live demo</button></div>
+                            <button class="project-button flex center">Live demo</button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-container graphic-design rounded shadow">
                     <img class="project-image" src="./assets/the_beast.jpg">
                     <div class="project-info flex column">
-                        <h2>Project 1</h2>
-                        <div class="project-buttons flex row">
-                            <button class="project-button flex center">Code</button>
-                            <button class="project-button flex center">Live demo</button></div>
+                        <h2>Project 2</h2>
                     </div>
                 </div>
 
                 <div class="project-container web-project rounded shadow">
                     <img class="project-image" src="./assets/profile-picture.jpg">
                     <div class="project-info flex column">
-                        <h2>Project 1</h2>
-                        <div class="project-buttons flex row">
-                            <button class="project-button flex center">Code</button>
-                            <button class="project-button flex center">Live demo</button></div>
+                        <h2>Project 3</h2>
                     </div>
                 </div>
                 
                 <div class="project-container web-project rounded shadow">
                     <img class="project-image" src="./assets/profile-picture.jpg">
                     <div class="project-info flex column">
-                        <h2>Project 1</h2>
+                        <h2>Project 4</h2>
                         <div class="project-buttons flex row">
                             <button class="project-button flex center">Code</button>
-                            <button class="project-button flex center">Live demo</button></div>
+                            <button class="project-button flex center">Live demo</button>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
             <div class="about flex column">
-                <div class="about-section flex justify-space-between">
+                <div class="about-section flex row justify-space-between align-start">
                     <img src="/assets/profile-picture.jpg">
-                    <p class="offset">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam odio sunt quidem distinctio! Unde maxime eveniet nihil vitae harum, rem totam assumenda? Doloremque, id? Maxime, commodi delectus. Adipisci, perferendis.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat facere provident assumenda. Sit amet officia, eum veritatis ab eveniet voluptatum hic quas totam harum, sequi vitae? Nihil autem eaque modi.
-                    </p>
+                    <div class="about-paragraphs flex column">
+                        <p>Lorem ipsum dolor sit <span class="weight-bold"> consectetur adipisicing</span> elit. Vitae magnam odio sunt quidem distinctio! Unde maxime eveniet nihil vitae harum, rem totam assumenda? <span class="weight-bold">Doloremque, id?</span> Maxime, commodi delectus. Adipisci, perferendis.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat <span class="weight-bold">facere provident</span> assumenda. Sit amet officia, eum veritatis ab eveniet <span class="weight-bold">voluptatum</span> hic quas totam harum, sequi vitae? <span class="weight-bold">Nihil autem eaque modi.</span>
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam odio sunt quidem distinctio! Unde maxime eveniet nihil vitae harum, rem totam assumenda? Doloremque, id? Maxime, commodi delectus. Adipisci, perferendis.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat facere provident assumenda. Sit amet officia, eum veritatis ab eveniet voluptatum hic quas totam harum, sequi vitae? Nihil autem eaque modi.
+                        </p>
+                    </div>
                 </div>
-                <div class="about-section flex">
+                <div class="about-section flex column">
                     <h3>Education</h3>
-                    <div class="information-containers offset flex column">
+                    <div class="information-containers flex column align-self-right">
 
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
                                 <h4>Designkandidat</h4>
-                                <h6>2017 – 2020</h6>
+                                <div class="flex row align-center">
+                                    <h6>2017 – 2020</h6>
+                                    <div class="triangle">
+                                    </div>
+                                </div>
                             </div>
                             <h5>Högskolan för design och konsthantverk</h5>
-                            <div class="expanded-information">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
-                            </div>
-                        </div>
-                        
-                        <div class="information-container flex column shadow rounded">
-                            <div class="information-box flex row justify-space-between align-center">
-                                <div class="information-headline flex column">
-                                    <div class="flex row justify-space-between">
-                                        <h4>Designkandidat</h4>
-                                        <h6>2017 – 2020</h6>
-                                    </div>
-                                    <h5>Högskolan för design och konsthantverk</h5>
-                                </div>
-                                <div class="expand-button flex align-center justify-end">
-                                </div>
-                            </div>
                             <div class="expanded-information">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
                             </div>

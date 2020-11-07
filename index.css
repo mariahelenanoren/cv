@@ -39,15 +39,6 @@ h1 {
     font-size: 1.1rem;
 }
 
-/* Socials */
-.social {
-    width: 2.1rem;
-    height: 2.1rem;
-    margin-left: 0.5rem;
-    border-radius: 100%;
-    background-color: #FC584D;
-}
-
 /* Hamburger */
 .hamburger {
     width: 2.2rem;
@@ -93,11 +84,29 @@ h1 {
     padding: 4rem 8rem;
     max-width: 75rem;
     width: 100%;
+    height: 100%;
 }
 
 .hamburger-menu li {
     margin: 1rem 0;
 }
+
+.hamburger-nav ul ul {
+    padding: 0 0 0 2rem;
+}
+
+/* Socials */
+.socials {
+    height: 100%;
+}
+.social {
+    width: 2.1rem;
+    height: 2.1rem;
+    margin-left: 0.5rem;
+    border-radius: 100%;
+    background-color: #FC584D;
+}
+
 
 /* MAIN */
 
@@ -154,6 +163,7 @@ main {
 h2 {
     margin-top: 0;
     font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .project-image {
@@ -167,12 +177,12 @@ h2 {
 
 .project-button {
     background-color: transparent;
-    border: 0.15rem #FC584D solid;
+    border: 0.13rem #FC584D solid;
     color: #FC584D;
     font-weight: 600;
     border-radius: 0.8rem;
     padding: 0.3rem 1rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.03rem;
     font-size: 0.8rem;
     line-height: 1.2rem;
     white-space: nowrap;
@@ -191,17 +201,21 @@ h2 {
 }
 
 .about-section img {
-    width: 20%;
+    border-radius: 100%;
+    width: 22%;
+    margin-right: 3%;
     height: auto;
 }
 
-.about-section > p {
-    width: 80%;
-    padding: 0 1.5rem;
+.about-paragraphs {
+    width: 100%;
 }
 
-h3 {
-    width: 30%;
+.about-paragraphs p {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding: 0 1.5rem;
 }
 
 h4, h5, h6 {
@@ -228,12 +242,17 @@ h6 {
     white-space: nowrap;
 }
 
-h6:after {
-    
+.triangle {
+    height: 0;
+    width: 0;
+    margin: 0.5rem 0 0 0.5rem;
+    border: 0.5rem solid transparent;
+    border-top-color:  #FC584D;
+    content: "";
 }
 
 .information-containers {
-    width: 100%;
+    width: 75%;
 }
 
 .information-container {
@@ -367,4 +386,16 @@ footer {
 
 .text-center {
     text-align: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-self-right {
+    align-self: flex-end;
+}
+
+.align-end {
+    align-items: flex-end;
 }
