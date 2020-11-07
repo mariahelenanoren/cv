@@ -16,7 +16,7 @@ html, body {
 .wrapper {
     height: 100%;
     width: 100%;
-    max-width: 150rem;
+    max-width: 75rem;
     padding: 0 12% 0 12%;
 }
 
@@ -259,6 +259,87 @@ h2 {
     color: white;
 }
 
+/* ABOUT */
+.about-section {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 3rem;
+}
+
+h3 {
+    width: 30%;
+}
+
+h4, h5, h6 {
+    margin: 0.2rem 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+h5 {
+    color: rgb(87, 87, 87);
+    font-weight: 400;
+    font-size: 1rem;
+    word-break: break-all;
+}
+
+h6 {
+    color: rgb(87, 87, 87);
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.about-section > p {
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.information-containers {
+    width: 100%;
+}
+
+.information-container {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1.5rem;
+    margin-bottom: 5%;
+    transition: height 1s ease-in-out;
+}
+
+.information-headline {
+    width: 90%;
+}
+
+.expand-button {
+    height: 0;
+    width: 0;
+    margin: 0.5rem 0 0 0.8rem;
+    border: 0.4rem solid transparent;
+    border-top-color:  #FC584D;
+    content: "";
+}
+
+.expanded-information {
+    width: 90%;
+    height: 0;
+    overflow: hidden;
+}
+
+.information-height {
+    height: 0;
+}
+
+.offset {
+    margin-top: 5rem;
+}
+
+
+
 /* FOOTER */
 footer {
     width: 100%;
@@ -329,4 +410,12 @@ footer {
 
 .grid {
     display: grid;
+}
+
+.overflow-visible {
+    overflow: visible!important;
+}
+
+.auto-height {
+    height: auto!important;
 }

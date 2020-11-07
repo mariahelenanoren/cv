@@ -1,6 +1,10 @@
 /* MOBILE */
 /* Max-width: 480px */
 
+.wrapper {
+    padding: 0 2rem;
+}
+
 .profile-text p {
     font-size: 1.1rem;
     text-align: center;
@@ -8,4 +12,25 @@
 
 .introduction img {
     width: 10rem;
+}
+
+.information-container {
+    padding: 1rem;
+}
+
+.about p, .information-container p {
+    font-size: 0.8rem;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 0.8rem;
+}
+
+h6 {
+    font-size: 0.8rem;
 }
