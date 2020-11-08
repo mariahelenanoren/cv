@@ -5,21 +5,23 @@ window.addEventListener("load", main);
 /** Functions to be initiated on window load */
 function main() {
     addEventListeners();
+    moveUpOnLoad();
 }
 
 function addEventListeners() {
     const hamburger = document.querySelector(".hamburger");
     const filterButtons = document.querySelectorAll(".filter-buttons button")
-    const expandButtons = document.querySelectorAll(".information-container")
+    const informationContainers = document.querySelectorAll(".information-container")
 
-    for (let i = 0; i < expandButtons.length; i++) {
-        expandButtons[i].addEventListener("click", showExtendedInformation, expandButtons)
+    for (let i = 0; i < informationContainers.length; i++) {
+        informationContainers[i].addEventListener("click", showExtendedInformation, informationContainers)
     }
     for (let i = 0; i < filterButtons.length; i++) {
         filterButtons[i].addEventListener("click", filterProjects, filterButtons)
     }
 
     hamburger.addEventListener("click", animateHamburger);
+    window.addEventListener("scroll", moveUpOnLoad)
     
 }
 
@@ -96,6 +98,8 @@ function filterProjects(filterButtons) {
     if (filterButtons.target.innerHTML.toLowerCase() === "graphic design") {
         graphicDesignProjects.forEach( function(items) {
             items.style.display = "inline-block";
+            items.style.margin = "10% 0"
+            items.style.opacity = "0"
         });
         webProjects.forEach( function(items) {
             items.style.display = "none";
@@ -107,20 +111,53 @@ function filterProjects(filterButtons) {
         });
         webProjects.forEach( function(items) {
             items.style.display = "inline-block";
+            items.style.margin = "10% 0"
+            items.style.opacity = "0"
         });
     }
     else {
         graphicDesignProjects.forEach( function(items) {
             items.style.display = "inline-block";
+            items.style.margin = "10% 0"
+            items.style.opacity = "0"
+
         });
         webProjects.forEach( function(items) {
             items.style.display = "inline-block";
+            items.style.margin = "10% 0"
+            items.style.opacity = "0"
+
         });
 
     }
+    moveUpOnLoad();
 }
 
-function showExtendedInformation(expandButtons) {
-    const target = expandButtons.currentTarget;
-    target.children[2].classList.toggle("auto-height");
+function showExtendedInformation(informationContainers) {
+    const target = informationContainers.currentTarget;
+    const triangle = target.children[0].children[1].children[1];
+    target.children[2].classList.toggle("max-height");
+    triangle.style.transform = "rotate("+180+"deg)";
+    console.log(triangle.classList[0])
+}
+
+function moveUpOnLoad() {
+    const introText = document.querySelector(".introduction p")
+    
+    introText.style.marginTop = "0";
+    introText.style.opacity = "1";
+
+    
+    const viewportHeight = window.innerHeight;
+    const projectContainers = document.querySelectorAll(".project-container")
+
+
+    for (i = 0; i < projectContainers.length; i++) {
+        const projectBounding = projectContainers[i].getBoundingClientRect()
+        if (projectBounding.y < viewportHeight) {
+            projectContainers[i].style.opacity = "1";
+            projectContainers[i].style.margin = "5% 0"
+        }
+
+    }
 }
