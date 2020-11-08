@@ -5,28 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maria Helena Norén</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="tablet-large.css" media="(max-width: 1024px)">
     <link rel="stylesheet" href="tablet-small.css" media="(max-width: 768px)">
     <link rel="stylesheet" href="mobile.css" media="(max-width: 480px)">
+    
     <script src="./main.js"></script>
 
 </head>
-<body class="flex justify-center">
-    <div class="wrapper flex column">
-
-        <!-- HEADER -->
-        <header class="flex row align-center justify-space-between">
-            <h1 class="weight-semibold">Maria Helena Norén</h1>
-            <div class="hamburger column">
-                <span></span>
-                <span></span>
-                <span></span>
+<body class="flex column align-center">
+    <div class="pattern">
+        <img src="./assets/patternpad.svg" alt="">
+    </div>
+           <!-- Hamburger menu -->
+           <div class="hamburger-menu column align-center">
+            <div class="pattern">
+                <img src="./assets/patternpad.svg" alt="">
             </div>
-        </header>
-
-        <!-- Hamburger menu -->
-        <div class="hamburger-menu column align-center">
             <div class="hamburger-inner flex column">
                     <nav class="hamburger-nav flex grow weight-normal">
                         <ul>
@@ -41,12 +38,30 @@
                     </nav>
 
                     <div class="flex row align-bottom">
-                        <div class="social"></div>
-                        <div class="social"></div>
-                        <div class="social"></div>
+                        <div class="social flex center">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="social flex center">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="social flex center">
+                            <i class="fab fa-instagram"></i>
+                        </div>
                     </div>
             </div>
         </div>
+        
+    <div class="wrapper flex column">
+
+        <!-- HEADER -->
+        <header class="flex row align-center justify-space-between">
+            <h1 class="weight-semibold">Maria Helena Norén</h1>
+            <div class="hamburger column">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
 
         <!-- MAIN -->
         <main>
@@ -116,35 +131,49 @@
                         </p>
                     </div>
                 </div>
+                
                 <div class="about-section flex column">
                     <h3>Education</h3>
                     <div class="information-containers flex column align-self-right">
 
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
-                                <h4>Designkandidat</h4>
+                                <h4 class="weight-bold">Designkandidat</h4>
                                 <div class="flex row align-center">
-                                    <h6>2017 – 2020</h6>
+                                    <h6 class="weight-bold">2017 – 2020</h6>
                                     <div class="triangle">
                                     </div>
                                 </div>
                             </div>
-                            <h5>Högskolan för design och konsthantverk</h5>
+                            <h5 class="weight-normal">Högskolan för design och konsthantverk</h5>
                             <div class="expanded-information">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
                             </div>
                         </div>
-
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
-                                <h4>Designkandidat</h4>
+                                <h4 class="weight-bold">Designkandidat</h4>
                                 <div class="flex row align-center">
-                                    <h6>2017 – 2020</h6>
+                                    <h6 class="weight-bold">2017 – 2020</h6>
                                     <div class="triangle">
                                     </div>
                                 </div>
                             </div>
-                            <h5>Högskolan för design och konsthantverk</h5>
+                            <h5 class="weight-normal">Högskolan för design och konsthantverk</h5>
+                            <div class="expanded-information">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
+                            </div>
+                        </div>
+                        <div class="information-container flex column shadow rounded">
+                            <div class="information-box flex row justify-space-between align-center">
+                                <h4 class="weight-bold">Designkandidat</h4>
+                                <div class="flex row align-center">
+                                    <h6 class="weight-bold">2017 – 2020</h6>
+                                    <div class="triangle">
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="weight-normal">Högskolan för design och konsthantverk</h5>
                             <div class="expanded-information">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
                             </div>
@@ -152,12 +181,83 @@
 
                     </div>
                 </div>
+
+                <div class="about-section flex column">
+                    <h3>Work experience</h3>
+                    <div class="information-containers flex column align-self-right">
+
+                        <div class="information-container flex column shadow rounded">
+                            <div class="information-box flex row justify-space-between align-center">
+                                <h4 class="weight-bold">Designkandidat</h4>
+                                <div class="flex row align-center">
+                                    <h6 class="weight-bold">2017 – 2020</h6>
+                                    <div class="triangle">
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="weight-normal">Högskolan för design och konsthantverk</h5>
+                            <div class="expanded-information">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
+                            </div>
+                        </div>
+                        <div class="information-container flex column shadow rounded">
+                            <div class="information-box flex row justify-space-between align-center">
+                                <h4 class="weight-bold">Designkandidat</h4>
+                                <div class="flex row align-center">
+                                    <h6 class="weight-bold">2017 – 2020</h6>
+                                    <div class="triangle">
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="weight-normal">Högskolan för design och konsthantverk</h5>
+                            <div class="expanded-information">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="about-section flex column">
+                    <h3>Other</h3>
+                    <div class="information-containers flex column align-self-right">
+
+                        <div class="information-container flex column shadow rounded">
+                            <div class="information-box flex row justify-space-between align-center">
+                                <h4 class="weight-bold">Designkandidat</h4>
+                                <div class="flex row align-center">
+                                    <h6 class="weight-bold">2017 – 2020</h6>
+                                    <div class="triangle">
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="weight-normal">Högskolan för design och konsthantverk</h5>
+                            <div class="expanded-information">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias rem dolor libero voluptatem iusto debitis ea! Ut, animi illum fugit optio non deserunt dolores fugiat voluptas veniam molestiae incidunt porro!</p>
+                            </div>
+                        </div>
+                </div>
+
             </div>
         </main>
-
-        <!-- FOOTER -->
-        <footer></footer>
     </div>
 
+    <!-- FOOTER -->
+        <footer class="flex center">
+            <div class="footer-inner flex row justify-space-between align-center">
+                <h5 class="weight-semibold">Maria Helena Norén &#169; 2020</h5>
+                <div class="socials flex row">
+                        <div class="social flex center">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="social flex center">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="social flex center">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

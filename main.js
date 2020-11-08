@@ -29,14 +29,13 @@ function animateHamburger() {
     const hamburger = document.querySelectorAll(".hamburger span");
     const hamburgerMenu = document.querySelector(".hamburger-menu") // CHANGE TO MENU
 
-    if (hamburgerMenu.style.display !== "flex") {
-        crossTheHamburger(hamburger);
-        showHamburgerMenu(hamburgerMenu);
-    }
-    else if (hamburgerMenu.style.display == "flex") {
+    if (hamburgerMenu.classList.contains("flex")) {
         unCrossTheHamburger(hamburger);
-        hideHamburgerMenu(hamburgerMenu);
     }
+    else {
+        crossTheHamburger(hamburger);
+    }
+    showHamburgerMenu(hamburgerMenu);
 }
 
 function crossTheHamburger(hamburger) {
@@ -64,17 +63,11 @@ function unCrossTheHamburger(hamburger) {
 }
 
 function showHamburgerMenu(hamburgerMenu) {
-    const html = document.querySelector("html");
+    const html = document.querySelector("html")
+    hamburgerMenu.classList.toggle("flex")
 
-    html.style.overflowY = "hidden";
-    hamburgerMenu.style.display = "flex";
-}
-
-function hideHamburgerMenu(hamburgerMenu) {
-    const html = document.querySelector("html");
-
-    html.style.overflowY = "scroll";
-    hamburgerMenu.style.display = "none";
+    html.classList.toggle("scroll-lock")
+    
 }
 
 function filterProjects(filterButtons) {
