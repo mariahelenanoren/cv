@@ -13,6 +13,10 @@ function addEventListeners() {
     const filterButtons = document.querySelectorAll(".filter-buttons button")
     const informationContainers = document.querySelectorAll(".information-container")
 
+    /*informationContainers.forEach( trigger => {
+        trigger.addEventListener("click", showExtendedInformation, trigger)
+    })*/
+
     for (let i = 0; i < informationContainers.length; i++) {
         informationContainers[i].addEventListener("click", showExtendedInformation, informationContainers)
     }
@@ -126,12 +130,9 @@ function filterProjects(filterButtons) {
     moveUpOnLoad();
 }
 
-function showExtendedInformation(informationContainers) {
-    const target = informationContainers.currentTarget;
-    const triangle = target.children[0].children[1].children[1];
+function showExtendedInformation(trigger) {
+    const target = trigger.currentTarget;
     target.children[2].classList.toggle("max-height");
-    triangle.style.transform = "rotate("+180+"deg)";
-    console.log(triangle.classList[0])
 }
 
 function moveUpOnLoad() {

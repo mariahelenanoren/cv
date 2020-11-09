@@ -2,7 +2,15 @@
 /* Max-width: 768px */
 
 .wrapper {
-    padding: 0 4rem;
+    padding: 0 2.5rem;
+}
+
+.hamburger-inner {
+    padding: 8rem 2.5rem 4rem 2.5rem;
+}
+
+.introduction {
+    padding: 4rem 0;
 }
 
 .projects {
@@ -13,4 +21,61 @@
     column-gap: 1rem;
     -webkit-column-gap: 1rem;
     -moz-column-gap: 1rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.project-button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+}
+
+.about {
+    padding: 0 0 5rem 0;
+}
+
+.about-section:first-child {
+    flex-direction: column;
+}
+
+.about-section img {
+    width: 40%;
+    margin: 2rem;
+}
+
+.about-paragraphs p {
+    padding: 0;;
+}
+
+.footer-inner {
+    padding: 2rem 2.5rem;
+}
+
+.information-containers {
+    width: 100%;
+}
+
+/* ------ PROJECT.HTML ------ */
+.project-intro {
+    flex-direction: column-reverse;
+    padding: 0;
+}
+
+.project-intro-image {
+    width: 100%;
+    margin: 2.5% 0;
+}
+
+.project-intro-text {
+    width: 100%;
+    padding: 2rem 0;
 }

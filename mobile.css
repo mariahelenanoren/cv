@@ -2,5 +2,82 @@
 /* Max-width: 480px */
 
 .wrapper {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+}
+
+.hamburger-inner {
+    padding: 8rem 1.5rem 4rem 1.5rem;
+}
+
+.introduction {
+    padding: 3rem 1.5rem;
+}
+
+.introduction p {
+    text-align: center;
+}
+
+.text-break {
+    display: none;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.project-buttons button {
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+}
+
+.project-button {
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+}
+
+.about {
+    padding: 0 0 3rem 0;
+}
+
+.about-section img {
+    width: 60%;
+    align-self: center;
+}
+
+.about-section h5, .about-section h6 {
+    font-size: 1rem;
+}
+
+.information-container {
+    padding: 1rem;
+}
+
+.information-box {
+    flex-direction: column-reverse;
+}
+
+.information-box > div {
+    align-self: flex-end;
+}
+
+.information-box > h4 {
+    margin: 0.3rem 0;
+    align-self: flex-start;
+}
+
+.footer-inner {
+    padding: 2.5rem 1.5rem;
+    flex-direction: column;
+}
+
+.footer-inner h5 {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
 }
