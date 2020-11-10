@@ -1,36 +1,34 @@
-window.addEventListener("load", main);
+window.onload = main;
 
 /** Functions to be initiated on window load */
 function main() {
     addEventListeners();
-    moveUpOnLoad();
+    declareLoadAnimationElements();
 }
 
 function addEventListeners() {
-    window.addEventListener("scroll", moveUpOnLoad)
+    window.addEventListener("scroll", declareLoadAnimationElements)
 }
 
-function moveUpOnLoad() {
-    const images = document.querySelectorAll(".image-container img")
-    const introImage = document.querySelector(".project-intro-image")
-    const text = document.querySelector(".project-intro-text")
-    const viewportHeight = window.innerHeight;
-
-    if (text.getBoundingClientRect().y < viewportHeight) {
-        text.style.opacity = "1";
-        text.style.margin = "1.5rem 0"
+function declareLoadAnimationElements() {
+    const projectIntroText = document.querySelector(".project-intro-text");
+    initiateLoadAnimation(projectIntroText);
+    const projectIntroImage = document.querySelector(".project-intro-image");
+    initiateLoadAnimation(projectIntroImage);
+    
+    const projectImages = document.querySelectorAll(".image-container img")
+    for (i = 0; i < projectImages.length; i++) {
+        initiateLoadAnimation(projectImages[i]);
+        console.log(projectImages[i].offsetTop)
     }
-    if (introImage.getBoundingClientRect().y < viewportHeight) {
-        introImage.style.opacity = "1";
-        introImage.style.margin = "1.5rem 0";
-    }
+}
 
-    for (i = 0; i < images.length; i++) {
-        const projectBounding = images[i].getBoundingClientRect()
-        if (projectBounding.y < viewportHeight) {
-            images[i].style.opacity = "1";
-            images[i].style.margin = "1.5rem 0"
-        }
+function initiateLoadAnimation(element) {
+    const viewportHeight = Number(window.pageYOffset) + Number(window.innerHeight);
+    console.log(element)
 
+    if (element.offsetTop <= viewportHeight) {
+        element.style.opacity = "1";
+        element.style.margin = "1.5rem 0";
     }
 }

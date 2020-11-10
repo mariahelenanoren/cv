@@ -1,9 +1,9 @@
-window.addEventListener("load", main);
+window.onload = main;
 
 /** Functions to be initiated on window load */
 function main() {
     addEventListeners();
-    moveUpOnLoad();
+    declareLoadAnimationElements();
 }
 
 function addEventListeners() {
@@ -11,11 +11,18 @@ function addEventListeners() {
     const filterButtons = document.querySelectorAll(".filter-buttons button")
     const informationContainers = document.querySelectorAll(".information-container")
     const hamburgerLinks = document.querySelectorAll(".hamburger-nav li")
+    const projectContainers = document.querySelectorAll(".project-container")
 
+    /*for (let i = 0; i < filterButtons.length; i++) {
+        filterButtons[i].addEventListener("click", function() {
+            for (let i = 0; i < projectContainers.length; i++) {
+                initiateLoadAnimation(projectContainers[i]);
+            };
+        });
+    }*/
     for (let i = 0; i < hamburgerLinks.length; i++) {
         hamburgerLinks[i].addEventListener("click", () => scrollToPageSection(hamburgerLinks[i]))
     }
-
     for (let i = 0; i < informationContainers.length; i++) {
         informationContainers[i].addEventListener("click", () => showExtendedInformation(informationContainers[i]))
     }
@@ -24,8 +31,7 @@ function addEventListeners() {
     }
 
     hamburger.addEventListener("click", animateHamburger);
-    window.addEventListener("scroll", moveUpOnLoad)
-    
+    window.addEventListener("scroll", declareLoadAnimationElements);
 }
 
 function animateHamburger() {
@@ -89,50 +95,53 @@ function filterProjects(allButtons, targetButton) {
         }
     })
 
-
-    if (targetButton.innerHTML.toLowerCase() === "graphic design") {
-        graphicDesignProjects.forEach( function(items) {
-            items.style.display = "inline-block";
-            items.style.margin = "10% 0"
-            items.style.opacity = "0"
-        });
-        webProjects.forEach( function(items) {
-            items.style.display = "none";
+    if (targetButton.id === "graphic") {
+        graphicDesignProjects.forEach( function(project) {
+            webProjects.forEach( function(project) {
+                project.style.display = "none";
+            });
+            project.style.display = "inline-block";
+            project.style.opacity = "0"
+            project.style.margin = "3rem 0"
+            initiateLoadAnimation(project)
         });
     }
-    else if (targetButton.innerHTML.toLowerCase() === "web projects") {
-        graphicDesignProjects.forEach( function(items) {
-            items.style.display = "none";
+    else if (targetButton.id === "web") {
+        graphicDesignProjects.forEach( function(project) {
+            project.style.display = "none";
         });
-        webProjects.forEach( function(items) {
-            items.style.display = "inline-block";
-            items.style.margin = "10% 0"
-            items.style.opacity = "0"
+        webProjects.forEach( function(project) {
+            project.style.display = "inline-block";
+            project.style.opacity = "0"
+            project.style.margin = "3rem 0"
+            initiateLoadAnimation(project)
         });
     }
     else {
-        graphicDesignProjects.forEach( function(items) {
-            items.style.display = "inline-block";
-            items.style.margin = "10% 0"
-            items.style.opacity = "0"
-
+        graphicDesignProjects.forEach( function(project) {
+            project.style.display = "inline-block";
+            project.style.opacity = "0"
+            project.style.margin = "3rem 0"
+            initiateLoadAnimation(project)
         });
-        webProjects.forEach( function(items) {
-            items.style.display = "inline-block";
-            items.style.margin = "10% 0"
-            items.style.opacity = "0"
-
+        webProjects.forEach( function(project) {
+            project.style.display = "inline-block";
+            project.style.opacity = "0"
+            project.style.margin = "3rem 0"
+            initiateLoadAnimation(project)
         });
-
     }
-    moveUpOnLoad();
+    for (let index = 0; index < projectContainers.length; index++) {
+        initiateLoadAnimation(projectContainers[index]);
+        
+    }
 }
 
 function showExtendedInformation(trigger) {
     trigger.children[2].classList.toggle("max-height");
 }
 
-function moveUpOnLoad() {
+/*function initiateLoadAnimation() {
     const introText = document.querySelector(".introduction p")    
     introText.style.margin = "1.5rem 0";
     introText.style.opacity = "1";
@@ -148,7 +157,7 @@ function moveUpOnLoad() {
         }
 
     }
-}
+}*/
 
 /**
  * Closes the hamburger menu and scrolls to section of page
@@ -174,4 +183,23 @@ function scrollToPageSection(clickedLink) {
         left: 0,
         behavior: "smooth"
     });
+}
+
+function declareLoadAnimationElements() {
+    const introText = document.querySelector(".introduction p");
+    initiateLoadAnimation(introText);
+    
+    const projectContainers = document.querySelectorAll(".project-container")
+    for (i = 0; i < projectContainers.length; i++) {
+        initiateLoadAnimation(projectContainers[i]);
+    }
+}
+
+function initiateLoadAnimation(element) {
+    const viewportHeight = Number(window.pageYOffset) + Number(window.innerHeight);
+
+    if (element.offsetTop <= viewportHeight) {
+        element.style.opacity = "1";
+        element.style.margin = "1.5rem 0";
+    }
 }

@@ -8,11 +8,7 @@
 html, body {
     margin: 0;
     width: 100%;
-    left: 0;
-    top: 0;
     height: 100%;
-    min-height: 100%;
-    scroll-behavior: smooth;
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
@@ -175,7 +171,7 @@ main {
     font-size: clamp(1.35rem, 3vw, 1.8rem);
     opacity: 0;
     margin: 3rem 0;
-    transition: margin-top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition: margin-top 0.25s ease-in, opacity 0.25s ease-in;
 }
 
 /*  PROJECTS */
@@ -210,7 +206,7 @@ main {
     margin: 3rem 0;
     opacity: 0;
     width: 100%;
-    transition: margin 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition: margin 0.25s ease-in, opacity 0.25s ease-in;
     background-color: white;
     cursor: pointer;
 }
