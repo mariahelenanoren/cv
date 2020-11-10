@@ -13,14 +13,14 @@ function addEventListeners() {
     const hamburgerLinks = document.querySelectorAll(".hamburger-nav li")
 
     for (let i = 0; i < hamburgerLinks.length; i++) {
-        hamburgerLinks[i].addEventListener("click", scrollToPageSection, hamburgerLinks)
+        hamburgerLinks[i].addEventListener("click", () => scrollToPageSection(hamburgerLinks[i]))
     }
 
     for (let i = 0; i < informationContainers.length; i++) {
-        informationContainers[i].addEventListener("click", showExtendedInformation, informationContainers)
+        informationContainers[i].addEventListener("click", () => showExtendedInformation(informationContainers[i]))
     }
     for (let i = 0; i < filterButtons.length; i++) {
-        filterButtons[i].addEventListener("click", filterProjects, filterButtons)
+        filterButtons[i].addEventListener("click", () => filterProjects(filterButtons, filterButtons[i]))
     }
 
     hamburger.addEventListener("click", animateHamburger);
@@ -73,25 +73,24 @@ function showOrHideHamburgerMenu(hamburgerMenu) {
     
 }
 
-function filterProjects(filterButtons) {
+function filterProjects(allButtons, targetButton) {
     const graphicDesignProjects = document.querySelectorAll(".graphic-design")
     const webProjects = document.querySelectorAll(".web-project")
-    const allFilterButtons = document.querySelectorAll(".filter-buttons button")
 
-    allFilterButtons.forEach( function(button) {
+    allButtons.forEach( function(button) {
         button.classList.remove("active")
-        if (button !== filterButtons.target) {
+        if (button === targetButton) {
+            button.style.backgroundColor = "#FC584D";
+            button.style.color = "white";
+        }
+        else {
             button.style.backgroundColor = "transparent";
             button.style.color = "#FC584D";
-        }
-        else if (button == filterButtons.target) {
-            button.style.backgroundColor = "#FC584D";
-            button.style.color = "white"
         }
     })
 
 
-    if (filterButtons.target.innerHTML.toLowerCase() === "graphic design") {
+    if (targetButton.innerHTML.toLowerCase() === "graphic design") {
         graphicDesignProjects.forEach( function(items) {
             items.style.display = "inline-block";
             items.style.margin = "10% 0"
@@ -101,7 +100,7 @@ function filterProjects(filterButtons) {
             items.style.display = "none";
         });
     }
-    else if (filterButtons.target.innerHTML.toLowerCase() === "web projects") {
+    else if (targetButton.innerHTML.toLowerCase() === "web projects") {
         graphicDesignProjects.forEach( function(items) {
             items.style.display = "none";
         });
@@ -130,8 +129,7 @@ function filterProjects(filterButtons) {
 }
 
 function showExtendedInformation(trigger) {
-    const target = trigger.currentTarget;
-    target.children[2].classList.toggle("max-height");
+    trigger.children[2].classList.toggle("max-height");
 }
 
 function moveUpOnLoad() {
@@ -156,15 +154,15 @@ function moveUpOnLoad() {
  * Closes the hamburger menu and scrolls to section of page
  * @param {event} hamburgerLinks 
  */
-function scrollToPageSection(hamburgerLinks) {
+function scrollToPageSection(clickedLink) {
     const hamburgerMenu = document.querySelector(".hamburger-menu")
     const hamburger = document.querySelectorAll(".hamburger span");
     showOrHideHamburgerMenu(hamburgerMenu);
     unCrossTheHamburger(hamburger);
     
     /* Uses the innerHTML of the clicked link to target a corresponding id */
-    const clickedLink = hamburgerLinks.currentTarget.innerHTML.toLowerCase()
-    const firstWordInLink = clickedLink.split(" ")[0];
+    const linkContent = clickedLink.innerHTML.toLowerCase()
+    const firstWordInLink = linkContent.split(" ")[0];
     const target = document.querySelector("#" + firstWordInLink)
 
     /* Gets the y-position of the targeted section of the page */
