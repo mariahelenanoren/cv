@@ -75,6 +75,7 @@ function showOrHideHamburgerMenu(hamburgerMenu) {
 function filterProjects(allButtons, targetButton) {
     const graphicDesignProjects = document.querySelectorAll(".graphic-design")
     const webProjects = document.querySelectorAll(".web-project")
+    const projectContainers = document.querySelectorAll(".project-container")
 
     allButtons.forEach( function(button) {
         button.classList.remove("active")
@@ -124,9 +125,9 @@ function filterProjects(allButtons, targetButton) {
             initiateLoadAnimation(project)
         });
     }
+    
     for (let index = 0; index < projectContainers.length; index++) {
-        initiateLoadAnimation(projectContainers[index]);
-        
+        initiateLoadAnimation(projectContainers[index]); 
     }
 }
 

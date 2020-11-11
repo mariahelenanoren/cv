@@ -44,10 +44,6 @@
     align-self: center;
 }
 
-.about-section h5, .about-section h6 {
-    font-size: 1rem;
-}
-
 .information-container {
     padding: 1rem;
 }
@@ -63,6 +59,10 @@
 .information-box > h4 {
     margin: 0.3rem 0;
     align-self: flex-start;
+}
+
+.max-height {
+    max-height: 60vw;
 }
 
 .footer-inner {

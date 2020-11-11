@@ -105,10 +105,6 @@
     align-items: flex-end;
 }
 
-.max-height {
-    max-height: 8rem;
-}
-
 .scroll-lock {
     overflow-y: scroll;
     position: fixed;
