@@ -66,7 +66,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 /* Hamburger */
@@ -219,7 +219,7 @@ main {
 
 h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 500;
 }
 
@@ -278,13 +278,14 @@ h2 {
 
 .about-paragraphs p {
     width: 100%;
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-    padding: 0 1.5rem;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
+    line-height: 1.5rem;
+    padding: 0 1.7rem;
 }
 
 .about-section h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+
 }
 
 .about-section h4 {
@@ -296,7 +297,7 @@ h2 {
 
 .about-section h5, .about-section h6 {
     margin: 0.2rem 0;
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
     word-break: break-word;
     -ms-word-break: break-word;
 }
@@ -337,6 +338,7 @@ h2 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.25s ease-in-out;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
 }
 
 .information-height {
@@ -357,6 +359,6 @@ footer {
 }
 
 .footer-inner h5 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
 }

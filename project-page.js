@@ -8,6 +8,7 @@ function main() {
 
 function addEventListeners() {
     window.addEventListener("scroll", declareLoadAnimationElements)
+    window.addEventListener("resize", declareLoadAnimationElements)
 }
 
 function declareLoadAnimationElements() {
@@ -19,13 +20,11 @@ function declareLoadAnimationElements() {
     const projectImages = document.querySelectorAll(".image-container img")
     for (i = 0; i < projectImages.length; i++) {
         initiateLoadAnimation(projectImages[i]);
-        console.log(projectImages[i].offsetTop)
     }
 }
 
 function initiateLoadAnimation(element) {
     const viewportHeight = Number(window.pageYOffset) + Number(window.innerHeight);
-    console.log(element)
 
     if (element.offsetTop <= viewportHeight) {
         element.style.opacity = "1";
