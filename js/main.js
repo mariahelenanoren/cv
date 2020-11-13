@@ -6,6 +6,7 @@ function main() {
     declareLoadAnimationElements();
 }
 
+/** Sets eventlisteners on window load */
 function addEventListeners() {
     const hamburger = document.querySelector(".hamburger");
     const filterButtons = document.querySelectorAll(".filter-buttons button")
@@ -24,9 +25,10 @@ function addEventListeners() {
 
     hamburger.addEventListener("click", animateHamburger);
     window.addEventListener("scroll", declareLoadAnimationElements);
-    window.addEventListener("resize", declareLoadAnimationElements)
+    window.addEventListener("resize", declareLoadAnimationElements);
 }
 
+/** Animated the hamburger icon */
 function animateHamburger() {
     const hamburger = document.querySelectorAll(".hamburger span");
     const hamburgerMenu = document.querySelector(".hamburger-menu") // CHANGE TO MENU
@@ -40,6 +42,10 @@ function animateHamburger() {
     showOrHideHamburgerMenu(hamburgerMenu);
 }
 
+/**
+ * Crosses the span elements of the hamburger icon
+ * @param {Element} hamburger 
+ */
 function crossTheHamburger(hamburger) {
     
     hamburger[0].style.top = "0.7rem"
@@ -52,6 +58,10 @@ function crossTheHamburger(hamburger) {
     }, 200);
 }
 
+/**
+ * Uncrosses the span elements of the hamburger icon
+ * @param {Element} hamburger 
+ */
 function unCrossTheHamburger(hamburger) {
     
     setTimeout( function() {
@@ -64,6 +74,10 @@ function unCrossTheHamburger(hamburger) {
     hamburger[2].style.transform = "rotate(0deg)";
 }
 
+/**
+ * Toggles the visibility of the hamburger menu and scroll of html
+ * @param {Element} hamburgerMenu 
+ */
 function showOrHideHamburgerMenu(hamburgerMenu) {
     const html = document.querySelector("html")
     hamburgerMenu.classList.toggle("flex")
@@ -72,11 +86,17 @@ function showOrHideHamburgerMenu(hamburgerMenu) {
     
 }
 
+/**
+ * Changes the style of filter buttons and filters projects
+ * @param {Element} allButtons 
+ * @param {Element} targetButton 
+ */
 function filterProjects(allButtons, targetButton) {
     const graphicDesignProjects = document.querySelectorAll(".graphic-design")
     const webProjects = document.querySelectorAll(".web-project")
     const projectContainers = document.querySelectorAll(".project-container")
 
+    /** Changes style of filterbuttons */
     allButtons.forEach( function(button) {
         button.classList.remove("active")
         if (button === targetButton) {
@@ -89,11 +109,12 @@ function filterProjects(allButtons, targetButton) {
         }
     })
 
+    /** Filters projects */
     if (targetButton.id === "graphic") {
+        webProjects.forEach( function(project) {
+            project.style.display = "none";
+        });
         graphicDesignProjects.forEach( function(project) {
-            webProjects.forEach( function(project) {
-                project.style.display = "none";
-            });
             project.style.display = "inline-block";
             project.style.opacity = "0"
             project.style.margin = "3rem 0"
@@ -125,19 +146,24 @@ function filterProjects(allButtons, targetButton) {
             initiateLoadAnimation(project)
         });
     }
-    
+
+    /** Reruns load animation on projects */
     for (let index = 0; index < projectContainers.length; index++) {
         initiateLoadAnimation(projectContainers[index]); 
     }
 }
 
+/**
+ * Expands information container
+ * @param {Element} trigger The information container that triggered the click event
+ */
 function showExtendedInformation(trigger) {
     trigger.children[2].classList.toggle("max-height");
 }
 
 /**
  * Closes the hamburger menu and scrolls to section of page
- * @param {event} hamburgerLinks 
+ * @param {Event} hamburgerLinks 
  */
 function scrollToPageSection(clickedLink) {
     const hamburgerMenu = document.querySelector(".hamburger-menu")
@@ -161,6 +187,7 @@ function scrollToPageSection(clickedLink) {
     });
 }
 
+/** Declares which elements should be animated on window load */
 function declareLoadAnimationElements() {
     const introText = document.querySelector(".introduction p");
     initiateLoadAnimation(introText);
@@ -171,9 +198,14 @@ function declareLoadAnimationElements() {
     }
 }
 
+/**
+ * Initiates load animation on elements
+ * @param {Element} element 
+ */
 function initiateLoadAnimation(element) {
     const viewportHeight = Number(window.pageYOffset) + Number(window.innerHeight);
 
+    /** If top of element is  above bottom of page, change element style */
     if (element.offsetTop <= viewportHeight) {
         element.style.opacity = "1";
         element.style.margin = "1.5rem 0";
