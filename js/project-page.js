@@ -6,14 +6,17 @@ function main() {
     declareLoadAnimationElements();
 }
 
+/** Sets event listeners */
 function addEventListeners() {
     window.addEventListener("scroll", declareLoadAnimationElements)
     window.addEventListener("resize", declareLoadAnimationElements)
 }
 
+/** Declares which elements should be animated */
 function declareLoadAnimationElements() {
     const projectIntroText = document.querySelector(".project-intro-text");
     initiateLoadAnimation(projectIntroText);
+
     const projectIntroImage = document.querySelector(".project-intro-image");
     initiateLoadAnimation(projectIntroImage);
     
@@ -23,6 +26,10 @@ function declareLoadAnimationElements() {
     }
 }
 
+/**
+ * Initiates load animation
+ * @param {Element} element 
+ */
 function initiateLoadAnimation(element) {
     const viewportHeight = Number(window.pageYOffset) + Number(window.innerHeight);
 

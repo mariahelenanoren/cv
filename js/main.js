@@ -6,12 +6,16 @@ function main() {
     declareLoadAnimationElements();
 }
 
-/** Sets eventlisteners on window load */
+/** Sets event listeners*/
 function addEventListeners() {
     const hamburger = document.querySelector(".hamburger");
     const filterButtons = document.querySelectorAll(".filter-buttons button")
     const informationContainers = document.querySelectorAll(".information-container")
     const hamburgerLinks = document.querySelectorAll(".hamburger-nav li")
+
+    hamburger.addEventListener("click", animateHamburger);
+    window.addEventListener("scroll", declareLoadAnimationElements);
+    window.addEventListener("resize", declareLoadAnimationElements);
 
     for (let i = 0; i < hamburgerLinks.length; i++) {
         hamburgerLinks[i].addEventListener("click", () => scrollToPageSection(hamburgerLinks[i]))
@@ -22,13 +26,9 @@ function addEventListeners() {
     for (let i = 0; i < filterButtons.length; i++) {
         filterButtons[i].addEventListener("click", () => filterProjects(filterButtons, filterButtons[i]))
     }
-
-    hamburger.addEventListener("click", animateHamburger);
-    window.addEventListener("scroll", declareLoadAnimationElements);
-    window.addEventListener("resize", declareLoadAnimationElements);
 }
 
-/** Animated the hamburger icon */
+/** Animates the hamburger icon */
 function animateHamburger() {
     const hamburger = document.querySelectorAll(".hamburger span");
     const hamburgerMenu = document.querySelector(".hamburger-menu") // CHANGE TO MENU
@@ -63,7 +63,6 @@ function crossTheHamburger(hamburger) {
  * @param {Element} hamburger 
  */
 function unCrossTheHamburger(hamburger) {
-    
     setTimeout( function() {
         hamburger[0].style.top = "0rem"
         hamburger[2].style.top = "1.4rem"
@@ -80,10 +79,9 @@ function unCrossTheHamburger(hamburger) {
  */
 function showOrHideHamburgerMenu(hamburgerMenu) {
     const html = document.querySelector("html")
-    hamburgerMenu.classList.toggle("flex")
-
-    html.classList.toggle("scroll-lock")
+    html.classList.toggle("scroll-lock")  
     
+    hamburgerMenu.classList.toggle("flex")
 }
 
 /**
@@ -115,10 +113,7 @@ function filterProjects(allButtons, targetButton) {
             project.style.display = "none";
         });
         graphicDesignProjects.forEach( function(project) {
-            project.style.display = "inline-block";
-            project.style.opacity = "0"
-            project.style.margin = "3rem 0"
-            initiateLoadAnimation(project)
+            resetLoadAnimation(project)
         });
     }
     else if (targetButton.id === "web") {
@@ -126,24 +121,15 @@ function filterProjects(allButtons, targetButton) {
             project.style.display = "none";
         });
         webProjects.forEach( function(project) {
-            project.style.display = "inline-block";
-            project.style.opacity = "0"
-            project.style.margin = "3rem 0"
-            initiateLoadAnimation(project)
+            resetLoadAnimation(project)
         });
     }
     else {
         graphicDesignProjects.forEach( function(project) {
-            project.style.display = "inline-block";
-            project.style.opacity = "0"
-            project.style.margin = "3rem 0"
-            initiateLoadAnimation(project)
+            resetLoadAnimation(project)
         });
         webProjects.forEach( function(project) {
-            project.style.display = "inline-block";
-            project.style.opacity = "0"
-            project.style.margin = "3rem 0"
-            initiateLoadAnimation(project)
+            resetLoadAnimation(project)
         });
     }
 
@@ -187,7 +173,7 @@ function scrollToPageSection(clickedLink) {
     });
 }
 
-/** Declares which elements should be animated on window load */
+/** Declares which elements should be animated */
 function declareLoadAnimationElements() {
     const introText = document.querySelector(".introduction p");
     initiateLoadAnimation(introText);
@@ -199,7 +185,7 @@ function declareLoadAnimationElements() {
 }
 
 /**
- * Initiates load animation on elements
+ * Initiates load animation
  * @param {Element} element 
  */
 function initiateLoadAnimation(element) {
@@ -210,4 +196,11 @@ function initiateLoadAnimation(element) {
         element.style.opacity = "1";
         element.style.margin = "1.5rem 0";
     }
+}
+
+/** Resets styling made by load animation */
+function resetLoadAnimation(project) {
+    project.style.display = "inline-block";
+    project.style.opacity = "0"
+    project.style.margin = "3rem 0"
 }
