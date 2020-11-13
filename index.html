@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maria Helena Norén</title>
 
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/index.css">
@@ -13,19 +14,28 @@
     <link rel="stylesheet" href="./css/tablet-small.css" media="(max-width: 768px)">
     <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 480px)">
     
+    <!-- SCRIPT -->
     <script src="./js/main.js"></script>
 
 </head>
+
+<!-- BODY -->
 <body class="flex column align-center">
+
+    <!-- BACKGROUND PATTERN -->
     <div class="pattern">
         <img src="./assets/patternpad.svg" alt="">
     </div>
-           <!-- Hamburger menu -->
+           <!-- HAMBURGER MENU -->
            <div class="hamburger-menu column align-center">
+
+            <!-- BACKGROUND PATTERN -->
             <div class="pattern">
                 <img src="./assets/patternpad.svg" alt="">
             </div>
-            <div class="hamburger-inner flex column">
+                <div class="hamburger-inner flex column">
+
+                    <!-- HAMBURGER NAV MENU -->
                     <nav class="hamburger-nav flex grow weight-normal">
                         <ul>
                             <li>Projects</li>
@@ -38,6 +48,7 @@
                         </ul>
                     </nav>
 
+                    <!-- HAMBURGER SOCIALS -->
                     <div class="flex row align-bottom">
                         <a href="mailto: marialinder97@hotmail.com" target="_blank">
                             <div class="social flex center">
@@ -54,14 +65,16 @@
                             </div>
                         </a>
                     </div>
+                </div>
             </div>
-        </div>
         
     <div class="wrapper flex column">
 
         <!-- HEADER -->
         <header class="flex row align-center justify-space-between">
             <h1 class="weight-semibold">Maria Helena Norén</h1>
+
+            <!-- HAMBURGER ICON -->
             <div class="hamburger flex column center">
                 <span></span>
                 <span></span>
@@ -71,6 +84,8 @@
 
         <!-- MAIN -->
         <main>
+
+            <!-- INTRODUCTION -->
             <div class="introduction flex row center text-center">
                 <p class="weight-normal">
                     <span class="weight-semibold">Hello!</span> My name is <span class="weight-semibold">Maria Helena,</span><br class="text-break">
@@ -79,14 +94,17 @@
                 </p>
             </div>
 
+            <!-- FILTER BUTTONS -->
             <div class="filter-buttons wrap flex row justify-end">
                 <button class="project-button active" id="all">ALL</button>
                 <button class="project-button" id="graphic">GRAPHIC DESIGN</button>
                 <button class="project-button" id="web">WEB PROJECTS</button>
             </div>
 
+            <!-- PROJECT CONTAINER -->
             <div class="projects" id="projects">
 
+                <!-- PROJECT: JAVASCRIPT GAME -->
                 <a href="./javascript-game.html">
                     <div class="project-container web-project rounded shadow">
                         <img class="project-image" src="./assets/portfolio_images/javascript-game/screenshot-background(1).jpg">
@@ -99,6 +117,8 @@
                         </div>
                     </div>
                 </a>
+
+                <!-- PROJECT: VOCABULARY -->
                 <a href="./vocabulary.html">
                     <div class="project-container graphic-design rounded shadow">
                         <img class="project-image" src="./assets/portfolio_images/vocabulary/in-use(1).jpg">
@@ -107,6 +127,8 @@
                         </div>
                     </div>
                 </a>
+                
+                <!-- PROJECT: DÄR INGEN SKA BO -->
                 <a href="./exhibition-website.html">
                     <div class="project-container web-project rounded shadow">
                         <img class="project-image" src="./assets/portfolio_images/exhibition-website/screenshot-background(1).jpg">
@@ -115,6 +137,8 @@
                         </div>
                     </div>
                 </a>
+
+                <!-- PROJECT: TACTILE COMMUNICATION -->
                 <a href="./folder.html">
                     <div class="project-container graphic-design rounded shadow">
                         <img class="project-image" src="./assets/portfolio_images/folder/folder-white(1).jpg">
@@ -123,6 +147,8 @@
                         </div>
                     </div>
                 </a>
+
+                <!-- PROJECT: A ROOM FOR ONE'S OWN -->
                 <a href="./publication.html">
                     <div class="project-container graphic-design rounded shadow">
                         <img class="project-image" src="./assets/portfolio_images/publication/photo(1).jpg">
@@ -131,6 +157,8 @@
                         </div>
                     </div>
                 </a>
+
+                <!-- PROJECT: THE NON-ANONYMOUS-->
                 <a href="./graduation-website.html">
                     <div class="project-container web-project rounded shadow">
                         <img class="project-image" src="./assets/portfolio_images/graduation-website/graduation-website(1).jpg">
@@ -144,6 +172,8 @@
                         </div>
                     </div>
                 </a>
+
+                <!-- PROJECT: TÄLT -->
                 <a href="./talt.html">
                     <div class="project-container graphic-design rounded shadow">
                         <img class="project-image" src="./assets/portfolio_images/talt/logo(1).jpg">
@@ -154,7 +184,10 @@
                 </a>
             </div>
 
+            <!-- ABOUT CONTAINER -->
             <div class="about flex column" id="about">
+
+                <!-- ABOUT ME -->
                 <div class="about-section flex justify-space-between align-start">
                     <img src="./assets/profile-picture.jpg">
                     <div class="about-paragraphs flex column">
@@ -175,11 +208,15 @@
                     </div>
                 </div>
                 
+                <!-- EDUCATION  -->
                 <div class="about-section flex column" id="education">
                     <h3>Education</h3>
                     <div class="information-containers flex column align-self-right">
 
+                        <!-- EXPANDABLE INFORMATION CONTAINER -->
                         <div class="information-container flex column shadow rounded">
+
+                            <!-- MEDIEINSTITUTET -->
                             <div class="information-box flex row justify-space-between align-center">
                                 <h4 class="weight-bold">Front End Developer</h4>
                                 <div class="flex row align-center">
@@ -192,6 +229,8 @@
                                 <p>A two-year Higher Vocational Education (HVE) in front end development. The education places great focus on practical knowledge and also has two longer periods of internship. During this program we learn responsive webdevelopment using CSS, HTML, JavaScript among other things. </p>
                             </div>
                         </div>
+
+                        <!-- HDK -->
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
                                 <h4 class="weight-bold">Bachelor of Fine Arts in Design</h4>
@@ -205,6 +244,8 @@
                                 <p>A broad design education with a strong focus on project work, formulated by the student to fit their area of interest. During my education, I switched from focusing on printed material to exploring digital methods and tools. It was during this time that I became interested in web design and web programming.</p>
                             </div>
                         </div>
+
+                        <!-- HELLIDEN -->
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
                                 <h4 class="weight-bold">Graphic Design</h4>
@@ -222,10 +263,14 @@
                     </div>
                 </div>
 
+                <!-- WORK -->
                 <div class="about-section flex column" id="work">
                     <h3>Work experience</h3>
+
+                    <!-- EXPANDABLE INFORMATION CONTAINER -->
                     <div class="information-containers flex column align-self-right">
 
+                        <!-- TEMPO -->
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
                                 <h4 class="weight-bold">Cashier</h4>
@@ -239,6 +284,8 @@
                                 <p>For two summers I worked as a cashier at the Tempo grocery store in Åmot. My duties included handling Svenska Spel, Systembolaget orders and fishing licenses. Good customer service and efficiency were of great importance.</p>
                             </div>
                         </div>
+
+                        <!-- WIJ TRÄDGÅRDAR -->
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
                                 <h4 class="weight-bold">Cleaner</h4>
@@ -256,10 +303,14 @@
                     </div>
                 </div>
 
+                <!-- OTHER -->
                 <div class="about-section flex column" id="other">
                     <h3>Other</h3>
+
+                    <!-- EXPANDABLE INFORMATION CONTAINER -->
                     <div class="information-containers flex column align-self-right">
 
+                        <!-- KONSTKÅREN -->
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
                                 <h4 class="weight-bold">Chairperson</h4>
@@ -277,6 +328,7 @@
                             </div>
                         </div>
 
+                        <!-- KÖRKORT -->
                         <div class="information-container flex column shadow rounded">
                             <div class="information-box flex row justify-space-between align-center">
                                 <h4 class="weight-bold">Körkort</h4>
@@ -295,6 +347,8 @@
         <footer class="flex center">
             <div class="footer-inner flex row justify-space-between align-center">
                 <h5 class="weight-normal">Maria Helena Norén &#169; 2020</h5>
+
+                <!-- FOOTER SOCIALS -->
                 <div class="socials flex row">
                     <a href="mailto: marialinder97@hotmail.com" target="_blank">
                         <div class="social flex center">
