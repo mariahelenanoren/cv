@@ -65,6 +65,18 @@
     width: 100%;
 }
 
+.information-box {
+    flex-direction: column-reverse;
+}
+
+.information-box > div {
+    align-self: flex-end;
+}
+
+.information-box > h4 {
+    align-self: flex-start;
+}
+
 /* FOOTER */
 
 .footer-inner {
@@ -72,7 +84,7 @@
 }
 
 .max-height {
-    max-height: 34vw;
+    max-height: 50vw;
 }
 
 /* ------ PROJECT.HTML ------ */
