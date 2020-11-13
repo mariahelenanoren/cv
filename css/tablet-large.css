@@ -1,0 +1,33 @@
+/* TABLET LARGE */
+/* Max-width: 1024px */
+
+/* ------ INDEX.HTML ------ */
+.wrapper {
+    padding: 0 4rem;
+}
+
+.hamburger-inner {
+    padding: 8rem 4rem 4rem 4rem;
+}
+
+.footer-inner {
+    padding: 2rem 4rem;
+}
+
+/* ------ PROJECTS.HMTL ------ */
+
+.project-intro-image {
+    width: 40%;
+}
+
+.project-intro-text {
+    width: 60%;
+}
+
+.project-intro-text h2 {
+    margin: 0 0 0.4rem 0;
+}
+
+.project-intro-text h3 {
+    margin: 0.4rem 0;
+}

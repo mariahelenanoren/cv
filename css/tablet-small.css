@@ -1,0 +1,76 @@
+/* TABLET SMALL */
+/* Max-width: 768px */
+
+.wrapper {
+    padding: 0 2.5rem;
+}
+
+.hamburger-inner {
+    padding: 8rem 2.5rem 4rem 2.5rem;
+}
+
+.introduction {
+    padding: 4rem 0;
+}
+
+.projects {
+    column-count: 1;
+    -webkit-column-count: 1; /* Ch, Saf, And, BB  */
+    -moz-column-count: 1; /* Fx */
+
+    column-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.about {
+    padding: 0 0 5rem 0;
+}
+
+.about-section:first-child {
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.about-section img {
+    width: 40%;
+    margin: 2rem;
+}
+
+.about-paragraphs p {
+    padding: 0;
+    line-height: 1.4rem;
+}
+
+.footer-inner {
+    padding: 2rem 2.5rem;
+}
+
+.information-containers {
+    width: 100%;
+}
+
+.max-height {
+    max-height: 34vw;
+}
+
+/* ------ PROJECT.HTML ------ */
+.project-intro {
+    flex-direction: column-reverse;
+    padding: 0;
+}
+
+.project-intro-image {
+    width: 100%;
+    margin: 2.5% 0;
+}
+
+.project-intro-text {
+    width: 100%;
+    padding: 2rem 0;
+}
