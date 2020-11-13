@@ -9,6 +9,8 @@
     padding: 8rem 2.5rem 4rem 2.5rem;
 }
 
+/* INTRODUCTION */
+
 .introduction {
     padding: 4rem 0;
 }
@@ -16,6 +18,8 @@
 .introduction p {
     font-size: 1.35rem;
 }
+
+/* PROJECTS */
 
 .projects {
     column-count: 1;
@@ -31,6 +35,8 @@
     width: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
 }
+
+/* ABOUT */
 
 .about {
     padding: 0 0 5rem 0;
@@ -55,12 +61,14 @@
     line-height: 1.4rem;
 }
 
-.footer-inner {
-    padding: 2rem 2.5rem;
-}
-
 .information-containers {
     width: 100%;
+}
+
+/* FOOTER */
+
+.footer-inner {
+    padding: 2rem 2.5rem;
 }
 
 .max-height {
@@ -68,6 +76,7 @@
 }
 
 /* ------ PROJECT.HTML ------ */
+
 .project-intro {
     flex-direction: column-reverse;
     padding: 0;
