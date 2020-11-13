@@ -77,6 +77,14 @@
     align-self: flex-start;
 }
 
+.information-box h6 {
+    margin-bottom: 0.5rem;
+}
+
+.information-box i {
+    margin-bottom: 0.5rem;
+}
+
 /* FOOTER */
 
 .footer-inner {
