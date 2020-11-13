@@ -14,11 +14,15 @@
 }
 
 .introduction p {
-    text-align: center;
+    font-size: 1.3rem;
 }
 
 .text-break {
     display: none;
+}
+
+h2 {
+    font-weight: 1.2rem;
 }
 
 .project-image {
@@ -42,6 +46,10 @@
 .about-section img {
     width: 60%;
     align-self: center;
+}
+
+.about-section h3 {
+    font-size: 1.3rem;
 }
 
 .information-container {

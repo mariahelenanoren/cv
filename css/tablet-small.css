@@ -13,6 +13,10 @@
     padding: 4rem 0;
 }
 
+.introduction p {
+    font-size: 1.35rem;
+}
+
 .projects {
     column-count: 1;
     -webkit-column-count: 1; /* Ch, Saf, And, BB  */
@@ -40,6 +44,10 @@
 .about-section img {
     width: 40%;
     margin: 2rem;
+}
+
+.about-section h3 {
+    font-size: 1.4rem;
 }
 
 .about-paragraphs p {
