@@ -182,7 +182,7 @@ main {
     font-size: 1.8rem;
     opacity: 0;
     margin: 3rem 0;
-    transition: margin-top 0.25s ease, opacity 0.25s ease;
+    transition: margin-top 0.5s ease, opacity 0.25s ease;
 }
 
 /*  PROJECTS */
@@ -217,7 +217,7 @@ main {
     margin: 3rem 0;
     opacity: 0;
     width: 100%;
-    transition: margin 0.25s ease, opacity 0.25s ease;
+    transition: margin 0.5s ease, opacity 0.25s ease;
     background-color: white;
     cursor: pointer;
 }

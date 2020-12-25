@@ -120,7 +120,7 @@ h1 {
     margin: 3rem 0;
     width: 45%;
     object-fit: contain;
-    transition: margin 0.25s ease, opacity 0.25s ease;
+    transition: margin 0.5s ease, opacity 0.25s ease;
 }
 
 .project-intro-image img {
@@ -132,7 +132,7 @@ h1 {
     width: 55%;
     padding: 0 0 0 5%;
     margin: 3rem 0;
-    transition: margin 0.25s ease, opacity 0.25s ease;
+    transition: margin 0.5s ease, opacity 0.25s ease;
 }
 
 .project-intro-text h2 {
@@ -186,7 +186,7 @@ h1 {
     opacity: 0;
     width: 100%;
     height: auto;
-    transition: margin 0.25s ease, opacity 0.25s ease;
+    transition: margin 0.5s ease, opacity 0.25s ease;
 }
 
 /* FOOTER */
