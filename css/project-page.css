@@ -52,6 +52,8 @@ body a {
 }
 
 .pattern img {
+    width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -118,7 +120,7 @@ h1 {
     margin: 3rem 0;
     width: 45%;
     object-fit: contain;
-    transition: margin 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition: margin 0.25s ease, opacity 0.25s ease;
 }
 
 .project-intro-image img {
@@ -130,7 +132,7 @@ h1 {
     width: 55%;
     padding: 0 0 0 5%;
     margin: 3rem 0;
-    transition: margin 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition: margin 0.25s ease, opacity 0.25s ease;
 }
 
 .project-intro-text h2 {
@@ -176,13 +178,15 @@ h1 {
 
 .image-container {
     width: 100%;
+    height: auto;
 }
 
 .image-container img {
     margin: 3rem 0;
     opacity: 0;
     width: 100%;
-    transition: margin 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    height: auto;
+    transition: margin 0.25s ease, opacity 0.25s ease;
 }
 
 /* FOOTER */
