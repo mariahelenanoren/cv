@@ -94,20 +94,3 @@
 .max-height {
     max-height: 50vw;
 }
-
-/* ------ PROJECT.HTML ------ */
-
-.project-intro {
-    flex-direction: column-reverse;
-    padding: 0;
-}
-
-.project-intro-image {
-    width: 100%;
-    margin: 2.5% 0;
-}
-
-.project-intro-text {
-    width: 100%;
-    padding: 2rem 0;
-}
