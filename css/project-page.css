@@ -157,10 +157,10 @@ h1 {
 
 .project-button {
     background-color: transparent;
-    border: 0.13rem #FC584D solid;
+    border: 0.1rem #FC584D solid;
     color: #FC584D;
-    font-weight: 600;
-    border-radius: 0.8rem;
+    font-weight: 400;
+    border-radius: 0.5rem;
     padding: 0.3rem 1rem;
     letter-spacing: 0.03rem;
     font-size: 0.8rem;
