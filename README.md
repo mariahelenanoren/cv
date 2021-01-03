@@ -6,4 +6,4 @@ Built using HTML, CSS and Javascript. The design is colorful yet simple, and sma
 
 The pattern used for the background is generated through [PatternPad](https://patternpad.com/editor.html).
 
-[Live demo](https://mariahelenanoren.github.io/portfolio/)
+[Live demo](https://mariahelenanoren.github.io/portfolio-v1/)
